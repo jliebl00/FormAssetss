@@ -8,8 +8,8 @@ public class Comisions {
 	
 	private double cancelFee;
 	private double studyFee;
-	private double openningfee;
-	private double modifyfee;
+	private double openningFee;
+	private double modifyFee;
 	
 	
 	public double getCancelFee() {
@@ -24,18 +24,19 @@ public class Comisions {
 	public void setStudyFee(double studyFee) {
 		this.studyFee = studyFee;
 	}
-	public double getOpenningfee() {
-		return openningfee;
+	public double getOpenningFee() {
+		return openningFee;
 	}
-	public void setOpenningfee(double openningfee) {
-		this.openningfee = openningfee;
+	public void setOpenningFee(double openningFee) {
+		this.openningFee = openningFee;
 	}
-	public double getModifyfee() {
-		return modifyfee;
+	public double getModifyFee() {
+		return modifyFee;
 	}
-	public void setModifyfee(double modifyfee) {
-		this.modifyfee = modifyfee;
+	public void setModifyFee(double modifyFee) {
+		this.modifyFee = modifyFee;
 	}
+	
 
 	
 }

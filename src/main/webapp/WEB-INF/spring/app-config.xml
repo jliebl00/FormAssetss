@@ -12,10 +12,10 @@
 
 	<bean id="loan" class="es.unileon.ulebank.formAssets.model.Loan">
 		<property name="totalLoan" value="0"></property>
-		<property name="openningfee" value="0" />
+		<property name="openningFee" value="0" />
 		<property name="studyFee" value="0" />
 		<property name="cancelFee" value="0" />
-		<property name="modifyfee" value="0" />
+		<property name="modifyFee" value="0" />
 
 	</bean>
 

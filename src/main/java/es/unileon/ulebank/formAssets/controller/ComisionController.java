@@ -26,8 +26,8 @@ public class ComisionController {
 		
 		
 		this.loan.setCancelFee(comision.getCancelFee());
-		this.loan.setModifyfee(comision.getModifyfee());
-		this.loan.setOpenningfee(comision.getOpenningfee());
+		this.loan.setModifyFee(comision.getModifyFee());
+		this.loan.setOpenningFee(comision.getOpenningFee());
 		this.loan.setStudyFee(comision.getStudyFee());
 
         return "redirect:/hello.htm";
@@ -36,6 +36,7 @@ public class ComisionController {
     @RequestMapping(method = RequestMethod.GET)
     protected Comisions formBackingObject(HttpServletRequest request) throws ServletException {
         Comisions commisions = new Comisions();
+        
         
         return commisions;
     }

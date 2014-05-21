@@ -30,8 +30,8 @@ public class HelloController {
 	        Map<String, Object> myModel = new HashMap<String, Object>();
 	        myModel.put("totalLoan", this.loan.getTotalLoan());
 	        myModel.put("cancelFee", this.loan.getCancelFee());
-	        myModel.put("modifyfee", this.loan.getModifyfee());
-	        myModel.put("openningfee", this.loan.getOpenningfee());
+	        myModel.put("modifyFee", this.loan.getModifyFee());
+	        myModel.put("openningFee", this.loan.getOpenningFee());
 	        myModel.put("studyFee", this.loan.getStudyFee());
 	        
 	        return new ModelAndView("hello", "model", myModel);
