@@ -10,15 +10,9 @@
        http://www.springframework.org/schema/mvc
        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-	<bean id="loan" class="es.unileon.ulebank.formAssets.model.Loan">
-		<property name="totalLoan" value="0"></property>
-		<property name="openningFee" value="0" />
-		<property name="studyFee" value="0" />
-		<property name="cancelFee" value="0" />
-		<property name="modifyFee" value="0" />
-
-	</bean>
-
+	 <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename" value="messages"/>
+    </bean>
 
 
 

@@ -1,4 +1,4 @@
-package es.unileon.ulebank.formAssets.model;
+package es.unileon.ulebank.formAssets.domain;
 
 /**
  * @author jesus

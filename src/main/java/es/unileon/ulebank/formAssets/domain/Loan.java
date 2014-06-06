@@ -1,6 +1,22 @@
-package es.unileon.ulebank.formAssets.model;
+package es.unileon.ulebank.formAssets.domain;
 
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Table;
+
+
+
+@Entity
+@Table(name="loans") 
 public class Loan {
+	@Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
 	double totalLoan;
 	private double cancelFee;
 	private double studyFee;

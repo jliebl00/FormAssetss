@@ -13,33 +13,34 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import es.unileon.ulebank.formAssets.model.Loan;
+import es.unileon.ulebank.formAssets.domain.Loan;
+import es.unileon.ulebank.formAssets.service.ListLoan;
 
 @Controller
 public class HelloController {
 	
 	 @Autowired
-	Loan loan;
+	 ListLoan loans;
 	
 	 @RequestMapping(value="/hello.htm")
 	 public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response)
 	            throws ServletException, IOException {
 
 	    
-	        
+		 	int last=this.loans.getLoans().size()-1;
 	        Map<String, Object> myModel = new HashMap<String, Object>();
-	        myModel.put("totalLoan", this.loan.getTotalLoan());
-	        myModel.put("cancelFee", this.loan.getCancelFee());
-	        myModel.put("modifyFee", this.loan.getModifyFee());
-	        myModel.put("openningFee", this.loan.getOpenningFee());
-	        myModel.put("studyFee", this.loan.getStudyFee());
+	        myModel.put("totalLoan", this.loans.getLoans().get(last).getTotalLoan());
+	        myModel.put("cancelFee", this.loans.getLoans().get(last).getTotalLoan());
+	        myModel.put("modifyFee", this.loans.getLoans().get(last).getTotalLoan());
+	        myModel.put("openningFee", this.loans.getLoans().get(last).getTotalLoan());
+	        myModel.put("studyFee", this.loans.getLoans().get(last).getTotalLoan());
 	        
 	        return new ModelAndView("hello", "model", myModel);
 	    }
 	
 
-	public void setLoan(Loan loan) {
-		this.loan = loan;
+	public void setLoan(ListLoan loans) {
+		this.loans = loans;
 	}
 
 	

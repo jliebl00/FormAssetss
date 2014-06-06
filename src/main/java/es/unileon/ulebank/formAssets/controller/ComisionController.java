@@ -10,26 +10,24 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import es.unileon.ulebank.formAssets.model.Comisions;
-import es.unileon.ulebank.formAssets.model.Loan;
+import es.unileon.ulebank.formAssets.domain.Comisions;
+import es.unileon.ulebank.formAssets.domain.Loan;
+import es.unileon.ulebank.formAssets.service.ListLoan;
 
 @Controller
 @RequestMapping(value="/comision.htm")
 public class ComisionController {
 	
 	@Autowired
-	private Loan loan;
+	ListLoan loans;
 
 	@RequestMapping(method = RequestMethod.POST)
     public String onSubmit(@Valid Comisions comision, BindingResult result)
     {
 		
 		
-		this.loan.setCancelFee(comision.getCancelFee());
-		this.loan.setModifyFee(comision.getModifyFee());
-		this.loan.setOpenningFee(comision.getOpenningFee());
-		this.loan.setStudyFee(comision.getStudyFee());
-
+		loans.saveComision(comision);
+		
         return "redirect:/hello.htm";
     }
 
@@ -41,12 +39,12 @@ public class ComisionController {
         return commisions;
     }
 
-	public Loan getLoan() {
-		return loan;
+	public ListLoan getloans() {
+		return loans;
 	}
 
-	public void setLoan(Loan loan) {
-		this.loan = loan;
+	public void setLoan(ListLoan loans) {
+		this.loans = loans;
 	}
 
    
